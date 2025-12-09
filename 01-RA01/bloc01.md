@@ -471,7 +471,7 @@ GUI:
 
 ---
 
-# 🟧 **BLOC 1.4 – Gestió de processos**
+# **BLOC 1.4 – Gestió de processos**
 
 ---
 
@@ -571,7 +571,7 @@ Característiques:
 
 ---
 
-# 🟧 **BLOC 1.5 – Gestió d’arxius**
+# **BLOC 1.5 – Gestió d’arxius**
 
 ---
 
@@ -633,7 +633,7 @@ Essencial per bases de dades.
 
 ---
 
-# 🟧 **BLOC 1.6 – Sistemes transaccionals**
+# **BLOC 1.6 – Sistemes transaccionals**
 
 ---
 
