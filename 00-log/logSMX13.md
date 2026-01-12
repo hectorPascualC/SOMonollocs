@@ -18,4 +18,8 @@
 - Resum com serà següents dies fins examen  
 
 # 9 december 2025
-- Pràctica 4 - comunicar alumnes que el següent dia l'han de presentar a la pissarra i aquesta presentació té nota
+- Pràctica 4 - comunicar alumnes que el següent dia l'han de presentar a la pissarra i aquesta presentació té nota   
+
+# 12 january 2026
+- Explicació Intro RA01 de tots els blocs que donarem, conceptes generals    
+- Explicació Bloc01 segons powerpoint + pissarra 
