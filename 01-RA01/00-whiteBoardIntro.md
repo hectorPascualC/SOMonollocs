@@ -6,7 +6,6 @@
 Que l’alumne entengui *què és realment* un sistema operatiu abans de parlar de res més.
 
 **Idees clau que**
-
 * Un ordinador **no funciona sol**
 * El sistema operatiu és el **programari base**
 * Fa d’intermediari entre:
@@ -23,7 +22,6 @@ Que l’alumne entengui *què és realment* un sistema operatiu abans de parlar 
 El SO no és “una pantalla”, sinó un conjunt de funcions internes.
 
 **Idees clau**
-
 * Kernel (nucli)
 * Gestió de processos
 * Gestió de memòria
@@ -66,7 +64,7 @@ Relacionar la teoria amb el que es **fa cada dia**.
 **Objectiu a classe**
 Donar sentit a tot el que has après.
 
-**Idees clau **
+**Idees clau 
 
 * El SO com a base de:
   * virtualització

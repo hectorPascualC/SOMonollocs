@@ -20,3 +20,6 @@
 # 12 january 2026
 - Explicació Intro RA01 de tots els blocs que donarem, conceptes generals    
 - Explicació Bloc01 segons powerpoint + pissarra 
+
+# 13 january 2026
+- Explicació Bloc01 segons powerpoint + pissarra 
