@@ -17,9 +17,9 @@
 # 9 december 2025
 - Pràctica 4 - comunicar alumnes que el següent dia l'han de presentar a la pissarra i aquesta presentació té nota  yh
 
-# 12 january 2026
+# 13 january 2026
 - Explicació Intro RA01 de tots els blocs que donarem, conceptes generals    
 - Explicació Bloc01 segons powerpoint + pissarra 
 
-# 13 january 2026
+# 14 january 2026
 - Explicació Bloc01 segons powerpoint + pissarra 
