@@ -55,7 +55,7 @@ Explica:**
 
 **A. com obté connexió a Internet la màquina virtual amb NAT, i**   
 Amb **NAT**, la màquina virtual obté connexió a Internet **a través de la màquina real**.
-VirtualBox actua com un **router virtual**, que permet que la màquina virtual surti a Internet utilitzant la connexió de l’amfitrió.
+VirtualBox actua com un **router virtual**, que permet que la màquina virtual surti a Internet utilitzant la connexió de l'amfitrió.
 
 **B. per què no cal modificar la xarxa real del centre.**   
 No cal modificar la xarxa real del centre perquè:
