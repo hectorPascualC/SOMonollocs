@@ -1,4 +1,4 @@
-# RA01 - INTRO
+# RA01 - INTRO  
 
 ## **Bloc 1 — Què és un sistema operatiu i per què és imprescindible**
 
@@ -52,7 +52,7 @@ El SO no és “una pantalla”, sinó un conjunt de funcions internes.
 **Objectiu a classe**
 Relacionar la teoria amb el que es **fa cada dia**.
 
-👉 **Idees clau**
+**Idees clau**
 * Interfície gràfica
 * Línia d’ordres (idea general)
 * Execució d’aplicacions
