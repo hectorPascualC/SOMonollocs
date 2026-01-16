@@ -24,3 +24,11 @@
 # 13 january 2026
 - Explicació Intro RA01 de tots els blocs que donarem, conceptes generals    
 - Explicació Bloc01 segons powerpoint + pissarra 
+
+# 15 january 2026
+- Inici ACtivitat 02 RA01
+
+# 16 january 2026
+- Explicació esquema UC
+- Revisió Acitivitat 01
+- Continuació Activitat 02

@@ -23,3 +23,6 @@
 
 # 14 january 2026
 - Explicació Bloc01 segons powerpoint + pissarra 
+
+# 15 january 2026
+- Inici ACtivitat 02 RA01 
