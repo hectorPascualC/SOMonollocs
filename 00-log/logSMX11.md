@@ -26,3 +26,8 @@
 
 # 15 january 2026
 - Inici ACtivitat 02 RA01 
+
+# 20 january 2026
+- Explicar Esquema CU en pissarra amb alumne voluntari
+remarcant diferenciacions amb el que tenim de la CPU
+- Continuació pràctica 2 de la RA01

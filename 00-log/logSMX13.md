@@ -26,3 +26,8 @@
 
 # 14 january 2026
 - Explicació Bloc01 segons powerpoint + pissarra 
+
+# 20 january 2026
+- Explicar Esquema CU en pissarra amb alumne voluntari
+remarcant diferenciacions amb el que tenim de la CPU
+- Inici pràctica 2 de la RA01

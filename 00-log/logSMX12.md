@@ -32,3 +32,7 @@
 - Explicació esquema UC
 - Revisió Acitivitat 01
 - Continuació Activitat 02
+
+# 20 january 2026
+- Inici explicació bloc02 de la RA01 -> tipus de Dades: tipus i operacions
+- pissarra i explicacions xtra fora del powerpoint
