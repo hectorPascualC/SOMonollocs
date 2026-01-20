@@ -40,19 +40,21 @@
 - Temps per estudiar i dubtes  
 
 # 18 december 2025
-- Examen pràctic
+- Examen pràctic  
+
+# 8 january 2026  
+- Correcció examen pràctic amb alumnes
 
 # 13 january 2026
 - Explicació Intro RA01 de tots els blocs que donarem, conceptes generals    
 - Explicació Bloc01 segons powerpoint + pissarra 
 
 # 14 january 2026
-- Explicació Bloc01 segons powerpoint + pissarra 
+- Explicació Bloc01 segons powerpoint + pissarra - Continuació
 
 # 15 january 2026
-- Inici ACtivitat 02 RA01 
+- Pràctica 2 - RA01 - Inici
 
 # 20 january 2026
-- Explicar Esquema CU en pissarra amb alumne voluntari
-remarcant diferenciacions amb el que tenim de la CPU
+- Explicar Esquema CU en pissarra amb alumne voluntari remarcant diferenciacions amb el que tenim de la CPU
 - Continuació pràctica 2 de la RA01

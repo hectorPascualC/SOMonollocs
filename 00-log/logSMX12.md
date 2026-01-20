@@ -47,18 +47,24 @@
 # 19 december 2025
 - Correcció examen pràctic amb alumnes
 
+# 8 january 2026  
+- Practica 1 - RA01 - Inici  
+
+# 9 january 2026  
+- Practica 1 - RA01 - Continuació  
+
 # 13 january 2026
 - Explicació Intro RA01 de tots els blocs que donarem, conceptes generals    
 - Explicació Bloc01 segons powerpoint + pissarra 
 
 # 15 january 2026
-- Inici ACtivitat 02 RA01
+- Pràctica 2 - RA01 - Inici
 
 # 16 january 2026
 - Explicació esquema UC
-- Revisió Acitivitat 01
+- Pràctica 1 - RA01 - Revisió a la pissarra
 - Continuació Activitat 02
 
 # 20 january 2026
-- Inici explicació bloc02 de la RA01 -> tipus de Dades: tipus i operacions
-- pissarra i explicacions xtra fora del powerpoint
+- Inici explicació bloc02 de la RA01 -> tipus de Dades: tipus i operacions  
+- pissarra i explicacions xtra fora del powerpoint  
