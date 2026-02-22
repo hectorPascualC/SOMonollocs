@@ -4,7 +4,7 @@ paginate: true
 theme: default
 
 header: "RA02 – Instal·lació de Sistemes Operatius · Bloc 1 – Fonaments del Sistema Operatiu"
-footer: "Mòdul 0374 – Administració de Sistemes Operatius"
+footer: "Mòdul 0222 – SO Monolloc"
 
 style: |
     header, footer {
@@ -21,7 +21,8 @@ style: |
 # **RA02 – Bloc 1**
 ## **Fonaments del Sistema Operatiu**
 
-**SMX01 — Administració de Sistemes Operatius**  
+**SMX01 — SO Monolloc**  
+**Instal·la sistemes operatius, relacionant-ne les característiques amb el maquinari de l'equip i el programari d'aplicació**
 **Professor — Hèctor Pascual**
 
 ---
@@ -58,7 +59,7 @@ Aquestes funcions permeten abstraure el maquinari i presentar-lo de manera usabl
 <!-- SLIDE 4 -->
 # 🔸 **Gestió d'Arxius (1/3)**  
 
-El S.O. organitza les dades en forma de:  
+El SO organitza les dades en forma de:  
 - **Arxius**  
 - **Directoris**  
 - **Rutes (absolutes i relatives)**
@@ -97,7 +98,7 @@ Funcions principals:
 <!-- SLIDE 6 -->
 # 🔸 **Gestió de Permisos i Accessos**
 
-El S.O. controla:  
+El SO controla:  
 - Propietari  
 - Grup  
 - Permisos (lectura, escriptura, execució)
@@ -112,57 +113,55 @@ Objectius:
 <!-- SLIDE 7 -->
 # 🔸 **Accés Simultani als Arxius**
 
-RA02 (p. 9) detalla que el S.O. ha de garantir:  
+El SO ha de garantir:  
 - Bloqueig d'arxius o parts d'un arxiu  
-- Evitar condicions de cursa  
-- Assegurar integritat de la informació  
+- Evitar condicions de cursa (2 processos → mateix arxiu → mateix temps)
+- Assegurar integritat de la informació (no corrompre dades, no perdua dades, fitxer no estat inconsistent)
 
-**Esquema conceptual:**
-
-```
-
-Procés A ----
---> Fitxer X (bloqueig exclusiu)
-Procés B ----/
-
-```
-
-Només un procés pot modificar un recurs al mateix temps.
+> Només un procés pot modificar un recurs al mateix temps.
 
 ---
 
 <!-- SLIDE 8 -->
 # 🔸 **Gestió de l'Espai del Disc**
 
-Mètodes d'assignació segons RA02 (p. 10):  
-- **Assignació contigua** (ràpida, pot fragmentar)  
-- **Assignació enllaçada** (flexible, lenta en accés seqüencial)  
-- **Assignació indexada** (equilibri rendiment/eficiència)  
+Mètodes d'assignació:  
+- **Assignació contigua** (ràpida, pot fragmentar) → blocs seguits
+- **Assignació enllaçada** (flexible, lenta en accés seqüencial) → blocs poden estar separats
+- **Assignació indexada** (equilibri rendiment/eficiència) → bloc especial desa totes adreces 
 
-El S.O. també controla:
+El SO també controla:
 - Espai lliure  
 - Expansió d'arxius  
 - Recuperació davant errors  
 
 ---
 
-<!-- SLIDE 9 -->
-# 🔸 **Gestió de Memòria (1/2)**
+<!-- SLIDE 9 | 1 -->
+# 🔸 **Gestió de Memòria (1/9)**
 
-La memòria es gestiona en capes (RA02 p. 11–14):  
+La memòria es gestiona en capes:  
+
+```
++------------------+  
+|      Ràpida      |  Registres (dins CPU, és la memòria immediata del processador)
++------------------+  
+|    Molt ràpida   |  Memòria cau (emmagatzena temporalment les dades i instruccion)
++------------------+  
+|    Intermitja    |  RAM (on carreguen els programes i les dades mentre s’estan executant)
++------------------+  
+|     Lenta        |  Disc (SO mou dades, que no utilitzen des de RAM, cap al disc, àrea swap)
++------------------+ 
 
 ```
 
-+------------------+  Registres (CPU)
-|      Ràpida      |
-+------------------+  Memòria cau
-|    Molt ràpida   |
-+------------------+  RAM
-|    Intermitja    |
-+------------------+  Disc (swap)
-|     Lenta        |
+---
 
-```
+<!-- SLIDE 9 | 2 -->
+# 🔸 **Gestió de Memòria (2/9)**  
+
+**Com més a prop de la CPU, més ràpida és la memòria**
+**Com més lluny, més lenta però més gran**
 
 - El S.O. assigna memòria a processos  
 - Allibera memòria quan ja no és necessària  
@@ -170,8 +169,8 @@ La memòria es gestiona en capes (RA02 p. 11–14):
 
 ---
 
-<!-- SLIDE 10 -->
-# 🔸 **Gestió de Memòria (2/2)**
+<!-- SLIDE 9 | 3 -->
+# 🔸 **Gestió de Memòria (3/9)**
 
 Tècniques principals:
 - **Paginació** (mides fixes)  
@@ -186,13 +185,98 @@ Objectius:
 
 ---
 
-<!-- SLIDE 11 -->
-# 🔸 **Gestió de Processos (1/2)**
+<!-- SLIDE 9 | 4 -->
+# 🔸 **Gestió de Memòria (4/9)**
 
-Segons RA02 (p. 15):  
-Un **procés** és una instància d'un programa en execució.
+🔹 Paginació (mides fixes)
+La memòria es divideix en blocs de mida fixa → pàgines
+El SO assigna pàgines als processos segons necessitat
 
-El S.O. gestiona:
+- Evita fragmentació externa → forats entre blocs
+- Permet memòria virtual
+- Pot generar fragmentació interna → espai sobrant no utilitzat
+
+---
+
+<!-- SLIDE 9 | 5 -->
+# 🔸 **Gestió de Memòria (5/9)**
+
+🔹 Segmentació (mides variables)
+La memòria es divideix en segments de mida variable 
+segons lògica del programa: codi, dades, pila…
+
+- Organització més natural del programa
+- Facilita protecció per segments
+- Pot generar fragmentació externa
+
+---
+
+<!-- SLIDE 9 | 6 -->
+# 🔸 **Gestió de Memòria (6/9)**
+
+🔹 Swapping (intercanvi RAM ↔ disc)
+El SO mou processos o dades entre la RAM i el disc (àrea swap) 
+quan la memòria principal és insuficient
+
+- Allibera RAM
+- Permet continuar executant processos
+- Disminueix el rendiment
+
+---
+
+<!-- SLIDE 9 | 7 -->
+# 🔸 **Gestió de Memòria (7/9)**
+
+🔹 Swapping (intercanvi RAM ↔ disc)
+
+Exemple:
+- Tens 8 GB de RAM
+- Tens 7,8 GB ocupats
+- Obres un programa nou
+- El sistema mou dades inactives al swap
+- Allibera RAM
+- El sistema continua funcionant
+
+---
+
+<!-- SLIDE 9 | 8 -->
+# 🔸 **Gestió de Memòria (8/9)**
+
+🔹 Memòria virtual (espai lògic > RAM física)
+Tècnica que permet que cada procés disposi d’un espai d’adreçament 
+més gran que la RAM física real, utilitzant disc com a suport
+
+- aïllament de processos
+- Permet executar programes grans
+- Basada en paginació 
+
+---
+
+<!-- SLIDE 9 | 10 -->
+# 🔸 **Gestió de Memòria (9/9)**
+
+🔹 Memòria virtual (espai lògic > RAM física)
+
+Exemple:
+adreça → número que identifica una posició concreta dins de la memòria
+- Usuari obre programa
+- SO crea un espai de memòria virtual per al procés
+- El programa rep adreces virtuals (0x00400000 - on està guardada la instrucció o dada dins RAM)
+- La CPU accedeix a una adreça virtual 
+- La MMU tradueix l'adreça virtual a una adreça física de la RAM (la posició real i exacta dins dels xips de memòria RAM)
+- Si la dada és a la RAM → execució normal
+- Si no hi és → es produeix un page fault
+- El sistema carrega la pàgina necessària des del disc
+- Es continua l’execució
+
+---
+
+<!-- SLIDE 10 | 1 -->
+# 🔸 **Gestió de Processos (1/3)**
+
+Un **procés** és programa en execució
+
+El SO gestiona:
 - Creació i terminació  
 - Planificació  
 - Comunicació entre processos  
@@ -200,16 +284,21 @@ El S.O. gestiona:
 
 ---
 
-<!-- SLIDE 12 -->
-# 🔸 **Gestió de Processos (2/2): PCB**
+<!-- SLIDE 10 | 2 -->
+# 🔸 **Gestió de Processos (2/3): PCB**
 
 El *Process Control Block* conté:  
 - Identificador del procés (PID)  
-- Estat  
-- Comptadors de programa  
-- Registres de CPU  
-- Informació de memòria  
-- Fitxers oberts  
+- Estat: executant, esperant, bloqueig
+- Comptadors de programa: següent instrucció a executar
+- Registres de CPU: valors instrucció actual
+- Informació de memòria: adreces assignades al procès
+- Fitxers oberts: recursos utilitzats oberts  
+
+---
+
+<!-- SLIDE 10 | 3 -->
+# 🔸 **Gestió de Processos (3/3): PCB**
 
 **Esquema:**
 
@@ -227,9 +316,8 @@ Fitxers oberts: [fd0, fd1, ...]
 
 ---
 
-<!-- SLIDE 13 -->
+<!-- SLIDE 11 | 1 -->
 # 🔸 **Gestió d'Entrada/Sortida (1/2)**  
-*(RA02 p. 16–18)*
 
 Funcions:
 - Gestionar comunicació amb dispositius  
@@ -243,27 +331,20 @@ Tipus de dispositius:
 
 ---
 
-<!-- SLIDE 14 -->
+<!-- SLIDE 11 | 2 -->
 # 🔸 **Gestió d'Entrada/Sortida (2/2)**
 
 Mètodes de comunicació:
-- **Programada:** la CPU espera  
-- **Interrupcions:** el dispositiu avisa quan ha acabat  
+- **Programada:** la CPU consulta repetidament estat dispositiu  
+- **Interrupcions:** el dispositiu envia un senyal quan finalitza  
 - **DMA:** accés directe a memòria (molta eficiència)  
 
-**Esquema conceptual del DMA:**
-
-```
-
-Dispositiu ──> Controlador DMA ──> Memòria
-|
-Notifica CPU
-
-```
+DMA: Direct Memory Access, un dispositiu pot transmetre dades directes a la RAM 
+sense que CPU hagi de copiar-les byte a byte
 
 ---
 
-<!-- SLIDE 15 -->
+<!-- SLIDE 12 -->
 # **Resum del Bloc 1**
 
 - El S.O. gestiona processos, memòria, arxius i dispositius  
