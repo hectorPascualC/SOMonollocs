@@ -30,7 +30,7 @@ style: |
 <!-- SLIDE 2 -->
 # 🔸 **1.1 Què és un Sistema Operatiu?**
 
-Un **Sistema Operatiu (S.O.)** és el programari que:  
+Un **SO** és el programari que:  
 - Gestiona els recursos del sistema  
 - Permet l'execució d'aplicacions  
 - Ofereix un entorn d'interacció a l'usuari  
@@ -115,8 +115,8 @@ Objectius:
 
 El SO ha de garantir:  
 - Bloqueig d'arxius o parts d'un arxiu  
-- Evitar condicions de cursa (2 processos → mateix arxiu → mateix temps)
-- Assegurar integritat de la informació (no corrompre dades, no perdua dades, fitxer no estat inconsistent)
+- Evitar **condicions de cursa** (2 processos → mateix arxiu → mateix temps)
+- Assegurar **integritat de la informació** (no corrompre dades, no perdua dades, fitxer no estat inconsistent)
 
 > Només un procés pot modificar un recurs al mateix temps.
 
@@ -163,7 +163,7 @@ La memòria es gestiona en capes:
 **Com més a prop de la CPU, més ràpida és la memòria**
 **Com més lluny, més lenta però més gran**
 
-- El S.O. assigna memòria a processos  
+- El SO assigna memòria a processos  
 - Allibera memòria quan ja no és necessària  
 - Garanteix que diversos programes puguin conviure  
 
@@ -188,20 +188,27 @@ Objectius:
 <!-- SLIDE 9 | 4 -->
 # 🔸 **Gestió de Memòria (4/9)**
 
-🔹 Paginació (mides fixes)
+🔹 **Paginació** (mides fixes)
 La memòria es divideix en blocs de mida fixa → pàgines
 El SO assigna pàgines als processos segons necessitat
 
-- Evita fragmentació externa → forats entre blocs
+- Evita **fragmentació externa** → forats entre blocs 
+```bash
+[ Procés A ][ FREE ][ Procés B ][ FREE ][ Procés C ]
+```
 - Permet memòria virtual
-- Pot generar fragmentació interna → espai sobrant no utilitzat
+- Pot generar **fragmentació interna** → espai sobrant no utilitzat
+```
+[ 4KB ocupats ]
+[ 2KB ocupats | 2KB buit ]
+```
 
 ---
 
 <!-- SLIDE 9 | 5 -->
 # 🔸 **Gestió de Memòria (5/9)**
 
-🔹 Segmentació (mides variables)
+🔹 **Segmentació** (mides variables)
 La memòria es divideix en segments de mida variable 
 segons lògica del programa: codi, dades, pila…
 
@@ -214,7 +221,7 @@ segons lògica del programa: codi, dades, pila…
 <!-- SLIDE 9 | 6 -->
 # 🔸 **Gestió de Memòria (6/9)**
 
-🔹 Swapping (intercanvi RAM ↔ disc)
+🔹 **Swapping** (intercanvi RAM ↔ disc)
 El SO mou processos o dades entre la RAM i el disc (àrea swap) 
 quan la memòria principal és insuficient
 
@@ -222,14 +229,14 @@ quan la memòria principal és insuficient
 - Permet continuar executant processos
 - Disminueix el rendiment
 
+> Aquest programa no s’està utilitzant → el trec complet de la RAM
+
 ---
 
 <!-- SLIDE 9 | 7 -->
 # 🔸 **Gestió de Memòria (7/9)**
 
-🔹 Swapping (intercanvi RAM ↔ disc)
-
-Exemple:
+Exemple swapping:
 - Tens 8 GB de RAM
 - Tens 7,8 GB ocupats
 - Obres un programa nou
@@ -242,7 +249,7 @@ Exemple:
 <!-- SLIDE 9 | 8 -->
 # 🔸 **Gestió de Memòria (8/9)**
 
-🔹 Memòria virtual (espai lògic > RAM física)
+🔹 **Memòria virtual** (espai lògic > RAM física)
 Tècnica que permet que cada procés disposi d’un espai d’adreçament 
 més gran que la RAM física real, utilitzant disc com a suport
 
@@ -250,14 +257,14 @@ més gran que la RAM física real, utilitzant disc com a suport
 - Permet executar programes grans
 - Basada en paginació 
 
+> El programa el divideix en petites parts (pàgines) → mou només parts petites del programa
+
 ---
 
 <!-- SLIDE 9 | 10 -->
 # 🔸 **Gestió de Memòria (9/9)**
 
-🔹 Memòria virtual (espai lògic > RAM física)
-
-Exemple:
+Exemple memòria virtual:
 adreça → número que identifica una posició concreta dins de la memòria
 - Usuari obre programa
 - SO crea un espai de memòria virtual per al procés
@@ -287,7 +294,7 @@ El SO gestiona:
 <!-- SLIDE 10 | 2 -->
 # 🔸 **Gestió de Processos (2/3): PCB**
 
-El *Process Control Block* conté:  
+El **Process Control Block** conté:  
 - Identificador del procés (PID)  
 - Estat: executant, esperant, bloqueig
 - Comptadors de programa: següent instrucció a executar
@@ -300,7 +307,7 @@ El *Process Control Block* conté:
 <!-- SLIDE 10 | 3 -->
 # 🔸 **Gestió de Processos (3/3): PCB**
 
-**Esquema:**
+**Esquema:** (representació lògica i conceptual)
 
 ```
 
@@ -339,7 +346,7 @@ Mètodes de comunicació:
 - **Interrupcions:** el dispositiu envia un senyal quan finalitza  
 - **DMA:** accés directe a memòria (molta eficiència)  
 
-DMA: Direct Memory Access, un dispositiu pot transmetre dades directes a la RAM 
+**DMA**: Direct Memory Access, un dispositiu pot transmetre dades directes a la RAM 
 sense que CPU hagi de copiar-les byte a byte
 
 ---
@@ -347,7 +354,7 @@ sense que CPU hagi de copiar-les byte a byte
 <!-- SLIDE 12 -->
 # **Resum del Bloc 1**
 
-- El S.O. gestiona processos, memòria, arxius i dispositius  
+- El SO gestiona processos, memòria, arxius i dispositius  
 - Les rutes i permisos estructuren l'accés a la informació  
 - La memòria es gestiona jeràrquicament i amb tècniques com paginació i swapping  
 - Els processos són controlats a través del PCB  

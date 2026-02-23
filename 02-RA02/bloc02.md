@@ -3,7 +3,7 @@ marp: true
 paginate: true
 theme: default
 
-header: "RA02 – Instal·lació de Sistemes Operatius · Bloc 2 – Arquitectura del Sistema Operatiu"
+header: "RA02 – Instal·lació de Sistemes Operatius · Bloc 2 – Arquitectura del SO"
 footer: "Mòdul 0374 – SO Monolloc"
 
 style: |
@@ -19,7 +19,7 @@ style: |
 
 <!-- SLIDE 1 -->
 # **RA02 – Bloc 2**
-## **Arquitectura del Sistema Operatiu**
+## **Arquitectura del SO**
 
 **SMX01 — SO Monolloc**  
 **Professor — Hèctor Pascual**
@@ -27,7 +27,7 @@ style: |
 ---
 
 <!-- SLIDE 2 -->
-# 🔸 **Arquitectura del Sistema Operatiu**
+# 🔸 **Arquitectura del SO**
 
 L’arquitectura defineix:
 - Com es representen les dades internament  
@@ -38,7 +38,7 @@ Actualment:
 - 32 bits (antic)
 - 64 bits (estàndard actual)
 
-CPU, sistema operatiu i aplicacions han de compartir arquitectura.
+CPU, SO i aplicacions han de compartir arquitectura.
 
 ---
 
@@ -80,30 +80,20 @@ Característiques:
 - Drivers integrats al kernel
 - Accés directe al maquinari
 
-**Esquema:**
-
-```
-
-Aplicacions
-↓
-Nucli (tot integrat)
-↓
-Maquinari
-
-```
 
 ---
 
 <!-- SLIDE 6 -->
 # 🔸 **Avantatges i Inconvenients (Monolítica)**
 
-- Alt rendiment  
-- Comunicació interna ràpida  
-- Simplicitat estructural  
-
-- Si falla el nucli → cau tot el sistema  
-- Difícil manteniment  
-- Poc modular  
+* Avantatges  
+    * Alt rendiment   
+    * Comunicació interna ràpida   
+    * Simplicitat estructural   
+* Inconvenients
+    * Si falla el nucli → cau tot el sistema  
+    * Difícil manteniment  
+    * Poc modular  
 
 ---
 
@@ -118,30 +108,18 @@ Característiques:
 - Serveis executats en mode usuari
 - Comunicació mitjançant missatges
 
-**Esquema:**
-
-```
-Aplicacions
-↓
-Serveis (drivers, FS, xarxa)
-↓
-Micronucli
-↓
-Maquinari
-
-```
-
 ---
 
 <!-- SLIDE 8 -->
 # 🔸 **Avantatges i Inconvenients (Micronucli)**
 
-- Millor seguretat  
-- Major modularitat  
-- Errors aïllats  
-
-- Lleugerament menys rendiment  
-- Comunicació més complexa  
+* Avantatges
+    - Millor seguretat  
+    - Major modularitat  
+    - Errors aïllats  
+* Inconvenients
+    - Lleugerament menys rendiment  
+    - Comunicació més complexa  
 
 ---
 
