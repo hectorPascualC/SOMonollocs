@@ -91,7 +91,7 @@ Funcions principals:
 - **Ruta absoluta:** comença en `/`  
   Exemple: `/home/pau/document.txt`  
 - **Ruta relativa:** depèn del directori actual  
-  Exemple: `../marc/projecte/`  
+  Exemple: Estem en etc i volem anar a pau `../home/pau/`  
 
 ---
 
@@ -126,6 +126,7 @@ El SO ha de garantir:
 # 🔸 **Gestió de l'Espai del Disc**
 
 Mètodes d'assignació:  
+bloc: La unitat mínima d’emmagatzematge que utilitza el sistema d’arxius al disc
 - **Assignació contigua** (ràpida, pot fragmentar) → blocs seguits
 - **Assignació enllaçada** (flexible, lenta en accés seqüencial) → blocs poden estar separats
 - **Assignació indexada** (equilibri rendiment/eficiència) → bloc especial desa totes adreces 
@@ -270,7 +271,7 @@ adreça → número que identifica una posició concreta dins de la memòria
 - SO crea un espai de memòria virtual per al procés
 - El programa rep adreces virtuals (0x00400000 - on està guardada la instrucció o dada dins RAM)
 - La CPU accedeix a una adreça virtual 
-- La MMU tradueix l'adreça virtual a una adreça física de la RAM (la posició real i exacta dins dels xips de memòria RAM)
+- La MMU (unitat de gestió de memòria) tradueix l'adreça virtual a una adreça física de la RAM (la posició real i exacta dins dels xips de memòria RAM)
 - Si la dada és a la RAM → execució normal
 - Si no hi és → es produeix un page fault
 - El sistema carrega la pàgina necessària des del disc
