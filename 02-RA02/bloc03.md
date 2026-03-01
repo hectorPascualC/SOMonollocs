@@ -113,19 +113,21 @@ Exemples propietaris:
 
 # 🔸 **Esquemes de Partició**
 
-MBR (1983):
+La manera com s’organitza i es realitza la divisió d'un disc dur en particions
+
+MBR - Master Boot Record - (1983):
 
 - Fins a 4 particions primàries  
-  → Limitació històrica en nombre de particions.
+  → Limitació històrica en nombre de particions
 
 - Limitacions de mida  
-  → No suporta discs molt grans.
+  → No suporta discs molt grans
 
 ---
 
 # 🔸 **Esquemes de Partició (II)**
 
-GPT:
+GPT (GUID Partition Table):
 
 - Més particions  
   → Permet moltes més divisions del disc.
@@ -134,34 +136,53 @@ GPT:
   → Adequat per discs moderns de gran capacitat.
 
 - Identificadors GUID  
-  → Cada partició té un identificador únic.
+  → Cada partició té un identificador únic
 
 ---
 
 # 🔸 **Tipus de Particions**
 
 - Primària → instal·lar SO  
-  → Pot contenir directament un sistema operatiu.
+  → Pot contenir directament un SO
+  → Divisió principal del disc
 
-- Estesa → contenidor  
-  → Serveix per crear múltiples particions lògiques.
+- Estesa o secundària → contenidor  
+  → Serveix per crear múltiples particions lògiques
+  → Serveix com a contenidor, no acepta stemes arxius
 
 - Lògica → dins estesa  
-  → Funcionen com particions independents.
+  → Funcionen com particions independents
+  → Amb el seu propi stemes d'arxiu
 
-Organitzen el disc en espais lògics.
+Organitzen el disc en espais lògics
+
+---
+
+# 🔸 **Nomenclatura entre SO**
+- Windows: Les particions s'identifiquen amb lletres (C:, D:, etc.).
+- GNU/Linux: Utilitza nomenclatura basada en /dev/sdX (X és la lletra del dispositiu) i /dev/sdXY (Y és el número de partició)
+
+/dev/sda: Primer disc
+/dev/sda1: Primera partició del primer disc
+/dev/sdb: Segon disc
 
 ---
 
 # 🔸 **Sistemes d’Arxius (Propietaris)**
 
+Defineix com es guarden, organitzen i gestionen les dades 
+en dispositius d'emmagatzematge: discs durs, memòries USB...
+
+Propietari: Desenvolupats per una empresa i controlat per aquesta.
+El codi no és lliure
+
 FAT / FAT32:
 
 - Compatible  
-  → Funciona en molts sistemes operatius.
+  → Funciona en molts sistemes operatius
 
 - Limitació 4GB per fitxer  
-  → No permet fitxers molt grans.
+  → No permet fitxers molt grans
 
 ---
 
@@ -170,13 +191,13 @@ FAT / FAT32:
 NTFS:
 
 - Permisos  
-  → Control d’accés per usuari.
+  → Control d'accés per usuari: qui pot fer què sobre un fitxer o carpeta
 
 - Seguretat  
-  → Inclou mecanismes de protecció avançats.
+  → Inclou mecanismes de protecció avançats
 
 - Grans volums  
-  → Admet discs i fitxers de gran mida.
+  → Admet discs i fitxers de gran mida
 
 ---
 
@@ -185,7 +206,7 @@ NTFS:
 HFS+ / APFS (Apple):
 
 - Optimitzats per ecosistema Apple  
-  → Dissenyats per funcionar amb macOS.
+  → Dissenyats per funcionar amb macOS
 
 ---
 
@@ -194,26 +215,28 @@ HFS+ / APFS (Apple):
 Procés de preparació del disc:
 
 - Creació sistema d’arxius  
-  → Defineix com s’organitzaran les dades.
+  → Defineix com s’organitzaran les dades
 
 - Organització en sectors i clústers  
-  → Divideix físicament el disc en unitats gestionables.
+  → Sector: És la unitat física mínima del disc
+  → Clúster: És una agrupació de sectors. El sistema d’arxius no treballa amb sectors individuals, sinó amb clústers
+  → Divideix físicament el disc en unitats gestionables
 
 - Permet llegir i escriure dades  
-  → Fa que el disc sigui usable pel sistema operatiu.
+  → Fa que el disc sigui usable pel sistema operatiu
 
 ---
 
 # 🔸 **Clonació**
 
-Còpia exacta d’un sistema.  
+Còpia exacta d’un sistema   
 → Replica sistema operatiu, configuracions i dades.
 
 Tipus:
 
-- Basada en sectors  
-- Basada en dades  
-- Imatge virtual  
+- Basada en sectors: còpia completa amb tots sectors. Replicació exacta
+- Basada en dades: nomès còpia de fitxers i dades existents
+- Imatge virtual: creació d’imatges per virtualitzar o clonar completament un sistema
 
 ---
 
@@ -228,13 +251,13 @@ Utilitat:
 
 # 🔸 **1.3 Instal·lació de Sistemes Operatius Lliures**
 
-Permeten:
+Permeten respecte al codi font:
 
 - Estudiar  
 - Modificar  
 - Distribuir  
 
-Fases:
+Fases instal.lació:
 
 - Planificació  
 - Preparació  
@@ -288,104 +311,33 @@ swap:
 
 ---
 
-# 🔸 **Punts de Muntatge**
+# 🔸 **Punts de Muntatge (I)**
 
-Directori on s’accedeix a una partició.
+Directori on s'accedeix a una partició  
 
-Exemples:
-
-- /  
-- /home  
-- /var  
-- /mnt  
-
-Estructura jeràrquica en arbre invertit.
-
----
-
-# 🔸 **Dual Boot**
-
-Permet:
-
-- Instal·lar dos SO en un mateix equip  
-- Seleccionar a l’arrencada  
-
-Requereix:
-
-- Particions separades  
-- Gestor d’arrencada  
+```
+/
+├── home
+│   ├── hector
+│   └── alumne
+├── var
+│   └── log
+├── tmp
+└── usr
+    └── bin
+```
 
 ---
 
-# 🔸 **1.4 Gestor d’Arrencada**
+# 🔸 **Punts de Muntatge (II)**
 
-BIOS → llegeix MBR  
-UEFI → carrega fitxer EFI  
+- /: fitxers essencials del SO
+- /home: configuració, dades i fitxers usuaris
+- /var: registres del stma
+- /tmp: fitxers temporals  
+- /usr: aplicacions instal.lades
 
-Transfereix control al carregador del sistema.
-
----
-
-# 🔸 **Gestor d’Arrencada Windows (BCD)**
-
-Magatzem de configuració:
-
-- bcdedit (mode text)  
-- msconfig (mode gràfic)  
-
-Fitxers:
-
-- bootmgr  
-- winload  
-- winresume  
-
----
-
-# 🔸 **Gestor d’Arrencada Linux (GRUB)**
-
-GRUB 2  
-
-Fitxers:
-
-- /etc/default/grub  
-- /boot/grub/grub.cfg  
-
-Comanda:
-
-sudo update-grub  
-
----
-
-# 🔸 **1.5 Llicències**
-
-Tipus:
-
-- OEM  
-- Retail  
-- Volum  
-
-En sistemes lliures:
-
-- GPL  
-- BSD  
-- MIT  
-- Apache  
-
----
-
-# 🔸 **Actualització del Sistema Operatiu**
-
-Objectiu:
-
-- Correcció errors  
-- Millores seguretat  
-- Noves funcionalitats  
-
-A Ubuntu:
-
-sudo apt update  
-sudo apt upgrade  
-snap refresh  
+Estructura jeràrquica en arbre invertit
 
 ---
 
