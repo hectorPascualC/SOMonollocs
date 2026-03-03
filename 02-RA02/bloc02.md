@@ -170,7 +170,7 @@ Sense drivers → el dispositiu no funciona.
 ---
 
 <!-- SLIDE 12 -->
-# 🔸 **DMA (Direct Memory Access)**
+# 🔸 **DMA (Direct Memory Access I)**
 
 És un mecanisme que permet que un dispositiu transfereixi dades directament 
 a la RAM sense que la CPU hagi de copiar-les byte a byte
@@ -180,10 +180,14 @@ DMA permet:
 - Alliberar la CPU
 - Millorar rendiment
 
+---
+
+# 🔸 **DMA (Direct Memory Access II)**  
+
+
 **Esquema:**
 
 ```
-
 Dispositiu
 ↓
 Controlador DMA
@@ -193,6 +197,10 @@ Memòria
 CPU (només notificació)
 
 ```
+
+---
+
+# 🔸 **DMA (Direct Memory Access II)**  
 
 Nomès notificació: 
 - no copia dades, no gestiona bytes, no queda bloquejada esperant
