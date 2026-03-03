@@ -34,11 +34,15 @@ L’arquitectura defineix:
 - Com s’organitzen els components del sistema  
 - Com interactuen nucli, serveis i maquinari  
 
-Actualment:
+Quantes adreces de memòria pot gestionar el sistema operatiu:
 - 32 bits (antic)
 - 64 bits (estàndard actual)
 
-CPU, SO i aplicacions han de compartir arquitectura.
+
+Perquè determina:
+- Quanta RAM pot gestionar
+- Si pot executar aplicacions modernes
+- Compatibilitat amb hardware actual
 
 ---
 
@@ -148,7 +152,7 @@ En escenaris amb:
 El sistema ha de:
 
 - Coordinar interrupcions
-- Gestionar buffers
+- Gestionar buffers (zona memòria temporal on es desen dades mentre s'està transferint)
 - Prioritzar processos
 
 ---
@@ -168,6 +172,9 @@ Sense drivers → el dispositiu no funciona.
 <!-- SLIDE 12 -->
 # 🔸 **DMA (Direct Memory Access)**
 
+És un mecanisme que permet que un dispositiu transfereixi dades directament 
+a la RAM sense que la CPU hagi de copiar-les byte a byte
+
 DMA permet:
 - Transferir dades directament a memòria
 - Alliberar la CPU
@@ -186,6 +193,15 @@ Memòria
 CPU (només notificació)
 
 ```
+
+Nomès notificació: 
+- no copia dades, no gestiona bytes, no queda bloquejada esperant
+- dona ordre inicial, per exemple: fes aquesta transferència i interromp quan acabi
+
+Ex:
+- La CPU dona una ordre inicial → Transfereix 4 MB d’aquest dispositiu a aquesta adreça de memòria  
+- El controlador DMA fa la transferència directament
+- Quan acaba, envia una interrupció a la CPU
 
 ---
 
