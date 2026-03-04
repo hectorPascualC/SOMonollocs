@@ -341,6 +341,195 @@ Estructura jeràrquica en arbre invertit
 
 ---
 
+<!-- SLIDE CONTINUACIÓ -->
+
+# 🔸 **Instal·lació del sistema operatiu Windows**
+
+Durant la instal·lació del sistema operatiu es realitzen diverses fases:
+
+- Selecció de l’idioma i configuració regional  
+  → permet definir idioma del sistema i del teclat.
+
+- Selecció del disc o partició  
+  → l’usuari escull on instal·lar el sistema operatiu.
+
+- Còpia de fitxers del sistema  
+  → el sistema copia els fitxers necessaris al disc.
+
+- Configuració inicial  
+  → creació d’usuari i configuració bàsica del sistema.
+
+---
+
+<!-- SLIDE -->
+
+# 🔸 **Planificació de la instal·lació**
+
+Abans d’instal·lar un sistema operatiu cal planificar:
+
+- Requisits de maquinari  
+  → comprovar si l’equip compleix els requisits mínims.
+
+- Espai disponible al disc  
+  → verificar que hi ha espai suficient per instal·lar el sistema.
+
+- Compatibilitat del sistema  
+  → assegurar que el maquinari és compatible amb el sistema operatiu.
+
+- Còpia de seguretat  
+  → guardar les dades importants abans de començar la instal·lació.
+
+---
+
+<!-- SLIDE -->
+
+# 🔸 **Suport tècnic del sistema operatiu**
+
+El suport tècnic és important per garantir el correcte funcionament del sistema.
+
+Pot provenir de:
+
+- Fabricant del sistema operatiu  
+  → actualitzacions i assistència oficial.
+
+- Comunitat d’usuaris  
+  → fòrums i documentació.
+
+- Empreses especialitzades  
+  → serveis professionals de suport.
+
+---
+
+<!-- SLIDE -->
+
+# 🔸 **Llicència del sistema operatiu**
+
+Els sistemes operatius poden tenir diferents tipus de llicència:
+
+- Llicència propietària  
+  → el codi font no és accessible ni modificable.
+
+- Llicència lliure  
+  → permet estudiar, modificar i redistribuir el programari.
+
+La llicència determina:
+
+- condicions d’ús  
+- distribució del programari  
+- possibilitat de modificació.
+
+---
+
+<!-- SLIDE -->
+
+# 🔸 **Noms dels dispositius i de les particions**
+
+En sistemes GNU/Linux els dispositius tenen una nomenclatura específica.
+
+Exemples:
+
+- /dev/sda  
+  → primer disc del sistema.
+
+- /dev/sda1  
+  → primera partició del primer disc.
+
+- /dev/sdb  
+  → segon disc del sistema.
+
+Aquest sistema permet identificar fàcilment discs i particions.
+
+---
+
+<!-- SLIDE -->
+
+# 🔸 **Esquemes de particions**
+
+Abans d’instal·lar el sistema operatiu cal definir com es dividirà el disc.
+
+Es poden crear diferents particions per:
+
+- sistema operatiu  
+- dades d’usuari  
+- memòria d’intercanvi (swap)
+
+La planificació de particions permet organitzar millor el disc.
+
+---
+
+<!-- SLIDE -->
+
+# 🔸 **Instal·lació del sistema operatiu Ubuntu**
+
+La instal·lació d’Ubuntu es realitza mitjançant un assistent.
+
+Fases principals:
+
+- selecció d’idioma  
+  → idioma del sistema.
+
+- configuració del teclat  
+  → tipus de teclat utilitzat.
+
+- selecció del disc  
+  → particions on s’instal·larà el sistema.
+
+- creació d’usuari  
+  → configuració del compte principal.
+
+Un cop finalitzat el procés, el sistema queda preparat per utilitzar.
+
+---
+
+<!-- SLIDE -->
+
+# 🔸 **Sistema Dual Boot**
+
+El dual boot permet instal·lar **dos sistemes operatius en el mateix equip**.
+
+En iniciar l’ordinador l’usuari pot escollir quin sistema vol utilitzar.
+
+Per configurar-lo cal:
+
+- instal·lar primer un sistema operatiu
+- crear una nova partició al disc
+- instal·lar el segon sistema operatiu
+
+El gestor d’arrencada permet seleccionar el sistema.
+
+---
+
+<!-- SLIDE -->
+
+# 🔸 **Creació d’escenaris Dual Boot**
+
+Per crear un sistema dual boot cal:
+
+- redimensionar una partició existent  
+  → alliberar espai al disc.
+
+- crear una nova partició  
+  → utilitzar-la per instal·lar el segon sistema operatiu.
+
+- instal·lar el segon sistema operatiu  
+  → el gestor d’arrencada permetrà seleccionar-lo.
+
+---
+
+<!-- SLIDE -->
+
+# 🔸 **Dual Boot realitzat correctament**
+
+Quan el dual boot està configurat correctament:
+
+- en iniciar l’equip apareix un menú d’arrencada
+- es pot seleccionar quin sistema operatiu utilitzar
+- cada sistema utilitza la seva partició
+
+Això permet treballar amb diferents sistemes operatius en un mateix ordinador.
+
+---
+
 # **Resum del Bloc 3**
 
 - Planificar abans d’instal·lar  
