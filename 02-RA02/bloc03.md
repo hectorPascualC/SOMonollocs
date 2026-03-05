@@ -3,8 +3,8 @@ marp: true
 paginate: true
 theme: default
 
-header: "RA02 – Instal·lació de Sistemes Operatius · Bloc 3 – Preparació i Instal·lació"
-footer: "Mòdul 0222 – SO Monolloc"
+header: "RA02 - Instal·lació de Sistemes Operatius · Bloc 3 – Preparació i Instal·lació"
+footer: "Mòdul 0222 - SO Monolloc"
 
 style: |
     header, footer {
