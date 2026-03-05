@@ -512,7 +512,7 @@ Per crear un sistema dual boot cal:
   → utilitzar-la per instal·lar el segon sistema operatiu.
 
 - instal·lar el segon sistema operatiu  
-  → el gestor d’arrencada permetrà seleccionar-lo.
+  → el gestor d’arrencada permetrà seleccionar-lo
 
 ---
 
