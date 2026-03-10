@@ -530,6 +530,149 @@ Això permet treballar amb diferents sistemes operatius en un mateix ordinador.
 
 ---
 
+# 🔸 Dual Boot vs Màquina Virtual
+
+## Dual Boot
+
+- Accés complet al maquinari
+- Millor rendiment
+- Només es pot utilitzar **un sistema operatiu alhora**
+
+## Màquina virtual
+
+- Permet executar diversos sistemes simultàniament
+- Comparteixen recursos del sistema
+- Rendiment inferior
+
+---
+
+# 🔸 Instal·lació d’un Dual Boot
+
+Exemple habitual:
+
+**Windows + Ubuntu**
+
+Procés general:
+
+1. Instal·lar primer **Windows**
+2. **Redimensionar la partició** del disc
+3. Instal·lar **Ubuntu** a l’espai lliure
+
+Durant la instal·lació es defineixen:
+
+- sistema d’arxius
+- mida de partició
+- punt de muntatge
+
+---
+
+# 🔸 Configuració de particions en Linux
+
+Paràmetres principals durant la instal·lació:
+
+- **Mida de la partició**
+- **Tipus de partició**
+  - primària
+  - lògica
+- **Sistema d’arxius**
+  - habitualment **ext4**
+- **Punt de muntatge**
+
+---
+
+# 🔸 Resultat final del Dual Boot
+
+Després de completar la instal·lació:
+
+1. Es reinicia l’ordinador
+2. Apareix el **gestor d’arrencada**
+3. Es pot seleccionar el sistema operatiu
+
+Exemple:
+
+```
+
+Ubuntu
+Windows Boot Manager
+Advanced options
+
+```
+
+---
+
+# 🔸 Gestor d’arrencada (Bootloader)
+
+Un **gestor d’arrencada** és el programa que:
+
+- s’executa quan s’encén l’ordinador
+- permet seleccionar el sistema operatiu
+- inicia el sistema operatiu escollit
+
+Sense un gestor d’arrencada **no seria possible utilitzar un dual boot**.
+
+---
+
+# 🔸 BIOS i UEFI
+
+El procés d’arrencada comença al firmware de l’ordinador:
+
+## BIOS
+
+- sistema tradicional d’arrencada
+- utilitzat en equips antics
+
+## UEFI
+
+- sistema modern
+- més ràpid i segur
+- permet discs **GPT**
+
+Aquest firmware inicia el **gestor d’arrencada**.
+
+---
+
+# 🔸 Gestor d’arrencada a Windows
+
+Windows utilitza:
+
+- **bootmgr**
+- **winload**
+
+Configuració d’arrencada:
+
+- **BCD (Boot Configuration Data)**
+
+Eines d’administració:
+
+```
+
+bcdedit
+msconfig
+
+```
+
+---
+
+# 🔸 Gestor d’arrencada a Linux
+
+En sistemes Linux s’utilitza habitualment:
+
+**GRUB**
+
+Funcions:
+
+- mostrar menú d’arrencada
+- seleccionar sistema operatiu
+- iniciar el sistema
+
+Comanda habitual per actualitzar-lo:
+
+```
+
+update-grub
+
+```
+
 # **Resum del Bloc 3**
 
 - Planificar abans d’instal·lar  
