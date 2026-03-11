@@ -485,17 +485,16 @@ Un cop finalitzat el procés, el sistema queda preparat per utilitzar.
 
 # 🔸 **Sistema Dual Boot**
 
-El dual boot permet instal·lar **dos sistemes operatius en el mateix equip**.
+El dual boot permet instal·lar **dos sistemes operatius en el mateix equip**
 
-En iniciar l’ordinador l’usuari pot escollir quin sistema vol utilitzar.
+En iniciar l’ordinador l’usuari pot escollir quin sistema vol utilitzar
 
 Per configurar-lo cal:
-
 - instal·lar primer un sistema operatiu
 - crear una nova partició al disc
 - instal·lar el segon sistema operatiu
 
-El gestor d’arrencada permet seleccionar el sistema.
+El gestor d’arrencada permet seleccionar el sistema
 
 ---
 
@@ -516,20 +515,6 @@ Per crear un sistema dual boot cal:
 
 ---
 
-<!-- SLIDE -->
-
-# 🔸 **Dual Boot realitzat correctament**
-
-Quan el dual boot està configurat correctament:
-
-- en iniciar l’equip apareix un menú d’arrencada
-- es pot seleccionar quin sistema operatiu utilitzar
-- cada sistema utilitza la seva partició
-
-Això permet treballar amb diferents sistemes operatius en un mateix ordinador.
-
----
-
 # 🔸 Dual Boot vs Màquina Virtual
 
 ## Dual Boot
@@ -546,7 +531,7 @@ Això permet treballar amb diferents sistemes operatius en un mateix ordinador.
 
 ---
 
-# 🔸 Instal·lació d’un Dual Boot
+# 🔸 Instal·lació Dual Boot
 
 Exemple habitual:
 
@@ -556,7 +541,7 @@ Procés general:
 
 1. Instal·lar primer **Windows**
 2. **Redimensionar la partició** del disc
-3. Instal·lar **Ubuntu** a l’espai lliure
+3. Instal·lar **Ubuntu** a l'espai lliure
 
 Durant la instal·lació es defineixen:
 
@@ -608,13 +593,13 @@ Un **gestor d’arrencada** és el programa que:
 - permet seleccionar el sistema operatiu
 - inicia el sistema operatiu escollit
 
-Sense un gestor d’arrencada **no seria possible utilitzar un dual boot**.
+Sense un gestor d’arrencada **no seria possible utilitzar un dual boot**
 
 ---
 
 # 🔸 BIOS i UEFI
 
-El procés d’arrencada comença al firmware de l’ordinador:
+El procés d’arrencada d’un ordinador comença al firmware, que és el programari integrat a la placa base
 
 ## BIOS
 
@@ -627,29 +612,31 @@ El procés d’arrencada comença al firmware de l’ordinador:
 - més ràpid i segur
 - permet discs **GPT**
 
-Aquest firmware inicia el **gestor d’arrencada**.
+Aquest firmware inicia el **gestor d’arrencada**
 
 ---
 
 # 🔸 Gestor d’arrencada a Windows
 
-Windows utilitza:
-
-- **bootmgr**
-- **winload**
-
-Configuració d’arrencada:
-
-- **BCD (Boot Configuration Data)**
-
-Eines d’administració:
+Procés d’arrencada de Windows
 
 ```
-
-bcdedit
-msconfig
-
+Firmware (BIOS/UEFI)
+↓
+bootmgr - gestor d’arrencada: seleccio sistema operatiu
+↓
+BCD (Boot Configuration Data) - base de dades amb la configuració d'arrencada del sistema
+↓
+winload.exe - carrega el nucli i els drivers essencials
+↓
+Nucli de Windows - inicia el sistema operatiu
 ```
+
+Eines d’administració
+
+bcdedit → gestió del BCD per línia de comandes
+
+msconfig → configuració d’arrencada amb interfície gràfica
 
 ---
 
