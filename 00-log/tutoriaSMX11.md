@@ -10,3 +10,7 @@
 ## 11032026
 - Explicació Dual Boot, gestor d'arrencades a partir de diapositiva amb teoria i exmples  
 - Explicació i dubtes sobre l'enunciat de la següent activitat 3  
+
+## 12032026  
+- Repàs teoria i pràctica sobre DUALS i instal.lació   
+- Continuació pràctica 3 i resoldre dubtes de la pràctica   
