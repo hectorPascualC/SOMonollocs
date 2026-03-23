@@ -58,7 +58,7 @@ Pregunta típica d'examen
 
 ---
 
-# 🔸 **MEMÒRIA VIRTUAL (IMPORTANT)**
+# 🔸 **MEMÒRIA VIRTUAL**
 
 - El programa usa **adreces virtuals**
 - La CPU treballa amb **adreces físiques**
@@ -68,7 +68,7 @@ Si no està a RAM → page fault (dada o instrucció que necessita el programa n
 
 ---
 
-# 🔸 **PROCESSOS (IMPORTANT)**
+# 🔸 **PROCESSOS**
 
 Procés = programa en execució  
 
@@ -80,7 +80,7 @@ El SO controla:
 
 ---
 
-# 🔸 **PCB (Process Control Block, EXAMEN)**
+# 🔸 **PCB (Process Control Block)**
 
 Conté:
 
@@ -194,7 +194,7 @@ Sistema lliure:
 
 ---
 
-# 🔸 **PUNTS DE MUNTATGE (important)**
+# 🔸 **PUNTS DE MUNTATGE**
 
 Tot penja de:
 
