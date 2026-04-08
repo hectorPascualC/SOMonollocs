@@ -1,4 +1,5 @@
 ---
+
 marp: true
 paginate: true
 theme: default
@@ -38,7 +39,7 @@ Aquest bloc se centra en:
 - `man` i `sudo`  
 - Errors habituals en executar ordres  
 
-Objectiu: entendre com treballar amb el sistema en **mode text**.
+Objectiu: entendre com treballar amb el sistema en **mode text**
 
 ---
 
@@ -160,6 +161,12 @@ Per obrir-lo:
 - Combina comandes i scripts  
 - Millor per automatització i administració  
 
+---
+
+<!-- SLIDE 8 -->
+# 🔸 **CMD vs PowerShell**
+
+
 Exemple d’àlies:
 
 ```powershell
@@ -242,6 +249,11 @@ Elements:
 - `-opcions` → modifiquen el comportament  
 - `arguments` → fitxers, directoris o valors  
 
+---
+
+<!-- SLIDE 13 -->
+# 🔸 **Sintaxi d’una ordre en Bash**
+
 Exemples:
 
 ```bash
@@ -312,6 +324,11 @@ Per executar una ordre com a administrador:
 ```bash
 sudo ls -l /root
 ```
+
+---
+
+<!-- SLIDE 16 -->
+# 🔸 **Permisos i ús de `sudo`**
 
 `sudo`:
 
