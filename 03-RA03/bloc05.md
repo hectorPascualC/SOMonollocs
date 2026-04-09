@@ -191,7 +191,7 @@ Per què és important?
 # 🔸 **Tipus de còpies de seguretat**
 
 - **Còpia completa** → guarda totes les dades seleccionades  
-- **Còpia incremental** → guarda només els canvis des de l'última còpia  
+- **Còpia incremental** → guarda els canvis des de l’última còpia que s’hagi fet, sigui completa o incremental 
 - **Còpia diferencial** → guarda només els canvis des de l'última còpia completa  
 - **Còpia mirall** → igual que la completa, però sense compressió  
 
@@ -200,6 +200,20 @@ Notes:
 - la còpia completa és la que Windows 10 fa per defecte  
 - la incremental és més ràpida i ocupa menys espai  
 - la diferencial és més fiable que la incremental, però més pesada  
+
+---
+
+<!-- SLIDE 12 -->
+# 🔸 **Tipus de còpies de seguretat**
+
+![Incremental](img/4-Different-Types-of-Backups-incremental-backup-768x415.png.webp)
+
+---
+
+<!-- SLIDE 12 -->
+# 🔸 **Tipus de còpies de seguretat**
+
+![Incremental](img/4-Different-Types-of-Backups-differential-backup-768x411.png.webp)
 
 ---
 
@@ -233,6 +247,11 @@ A Windows 10 es pot utilitzar l'**Historial d'arxius**:
    - freqüència de les còpies  
    - carpetes que s'han d'excloure  
 
+---
+
+<!-- SLIDE 14 -->
+# 🔸 **Configuració i restauració a Windows 10**
+
 **Restauració d'arxius:**
 
 1. `Tauler de control → Historial d'arxius`  
@@ -253,6 +272,11 @@ Beneficis principals:
 - **Automatització**  
 - **Escalabilitat**  
 - **Redundància**  
+
+---
+
+<!-- SLIDE 15 -->
+# 🔸 **Còpies de seguretat en línia**
 
 Exemples:
 
@@ -302,6 +326,11 @@ Documentar el procés és important perquè:
 - assegura el correcte funcionament del sistema  
 - facilita la gestió i resolució de problemes  
 - permet als responsables seguir els passos adequats  
+
+---
+
+<!-- SLIDE 18 -->
+# 🔸 **Verificació i documentació del sistema**
 
 Informació que cal documentar:
 
@@ -450,13 +479,16 @@ Exemple de restauració amb `dd`:
 dd if=/media/disc/arxiu.img of=/dev/sda2
 ```
 
-Precaució!!:
+**Precaució!!**:
 
 - només fer còpies en sistemes de fitxers desmuntats per evitar inconsistències  
 - en desmuntar el sistema força l’escriptura del que quedava pendent al disc  
 - un cop desmuntat ja no hi ha programes escrivint-hi a sobre mentre es fa la còpia  
 
-**Resum del bloc 5:**
+---
+
+<!-- SLIDE 26 -->
+# 🔸 **Resum del bloc 5:**
 
 - Windows ofereix restauració, mode segur i restabliment del sistema  
 - Les còpies de seguretat protegeixen dades i configuració  
