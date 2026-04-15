@@ -1,0 +1,200 @@
+---
+
+marp: true
+paginate: true
+theme: default
+
+header: "RA03 - Automatització de tasques del sistema"
+footer: "Mòdul 0374 - Administració de Sistemes Operatius"
+
+style: |
+    header, footer {
+        display: block;
+        width: 92vw;
+        font-size: .45rem;
+        color: #bbbbbcff;
+        z-index: 10;
+    }
+    header { text-align: right !important; padding-right: 0 !important; }
+    section {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+    }
+
+---
+
+# **RA03 – Bloc 9**
+## **Automatització de tasques**
+
+**SMX01 - Sistemes Operatius Monolloc**  
+**Professor - Hèctor Pascual**
+
+---
+
+# 3.1 - Planificació de tasques en Linux
+
+En sistemes Linux la planificació de tasques es realitza principalment amb:
+
+- cron → tasques repetitives
+
+---
+
+# 3.2 - El servei cron
+
+- Servei en segon pla
+- S’executa automàticament en iniciar el sistema
+- Llegeix configuracions programades
+- Executa comandes en els moments definits
+
+Comprovació del servei:
+
+```bash
+systemctl status cron
+```
+
+---
+
+# 3.3 - Estructura d’una línia de crontab
+
+```
+* * * * * comanda
+│ │ │ │ │
+│ │ │ │ └── dia setmana (0-7)
+│ │ │ └──── mes (1-12)
+│ │ └────── dia mes (1-31)
+│ └──────── hora (0-23)
+└────────── minut (0-59)
+```
+
+Cada camp defineix quan s’executa la tasca
+
+---
+
+# 3.3 - Estructura d'una línia de crontab
+
+| Valor | Dia       |
+| ----- | --------- |
+| 0     | Diumenge  |
+| 1     | Dilluns   |
+| 2     | Dimarts   |
+| 3     | Dimecres  |
+| 4     | Dijous    |
+| 5     | Divendres |
+| 6     | Dissabte  |
+| 7     | Diumenge  |
+
+---
+
+# 3.3 - Estructura d'una línia de crontab
+
+* Antic sistema UNIX
+* 0 ó 7 → diumenge
+* 1 → dilluns
+* 6 → dissabte
+
+---
+
+# 3.4 - Gestió de tasques amb crontab
+
+Editar tasques de l’usuari:
+
+```bash
+crontab -e
+```
+
+Llistar tasques:
+
+```bash
+crontab -l
+```
+
+Eliminar tasques:
+
+```bash
+crontab -r
+```
+
+---
+
+# 3.5 - Exemple pràctic amb cron
+
+Exemple: executar una comanda cada 5 minuts
+
+```bash
+*/5 * * * * date >> /home/usuari/cron_logs/cron_5min.log
+```
+
+Aquesta tasca:
+
+* `*` tots els valors possibles de minuts (0 - 59 minuts)
+* `/` interval o pas (step)
+* Executa `date`
+* Escriu el resultat en un fitxer
+* Es repeteix automàticament
+* `>>`  afegeix al final del fitxer
+
+---
+
+# 3.5 - Exemple pràctic amb cron
+
+Altres exemples: 
+* 1-30/2 -> de l’1 al 30, cada 2 mesos
+* `00 09-18 * * * /home/ramesh/bin/check-db-status` → check status de la bbdd cada dia
+* `30 08 10 06 * /home/ramesh/full-backup`→ executa backup a les 8:30 el 10 de juny (a l'any vinent es tornarà a executar)
+* `00 11,16 * * * /home/ramesh/bin/incremental-backup` → executa script de incremental backup cada dia a les 11:00 i a les 16:00  
+
+---
+
+# 3.5 - Exemple pràctic amb cron
+
+* `00 01 *  *  *  /usr/scripts/mysqldump.sh && /usr/scripts/application_backup.sh && /usr/scripts/tar_db_appfile.sh && /usr/scripts/cp_tar_remote_server.sh && /usr/scripts/tardelete.sh && /usr/scripts/clean_tmp.sh` → cada dia, multiple scripts a la 1:00 am
+
+Errors possibles:
+* 0 25-60/3 * * *
+* bad hour
+* errors in crontab file, can't install
+
+---
+
+# 3.6 - Directoris de cron del sistema
+
+El sistema també executa scripts ubicats a:
+
+* /etc/cron.hourly
+* /etc/cron.daily
+* /etc/cron.weekly
+* /etc/cron.monthly
+
+Aquests directoris permeten automatització global
+
+---
+
+# 3.7 - Verificació de tasques cron
+
+Consultar logs del servei:
+
+```bash
+journalctl -u cron
+```
+
+Comprovar fitxer generat:
+
+```bash
+cat /ruta/del/fitxer.log
+```
+
+La verificació és essencial en qualsevol automatització
+
+---
+
+# 3.8 - Resum i més info
+
+Cron per:
+
+* Tasques repetitives
+* Execució periòdica
+* [exemples cron](https://learning.lpi.org/en/learning-materials/102-500/107/107.2/107.2_01/)
+* [crontab guru](https://crontab.guru/examples.html)
+
+
