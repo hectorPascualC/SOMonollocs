@@ -102,6 +102,12 @@ Quan es crea una nova tasca, el quadre de diàleg inclou aquestes pestanyes prin
 - **Acció**  
   → què ha de fer la tasca
 
+
+---
+
+<!-- SLIDE 6 -->
+# 🔸 **Crear una nova tasca**
+
 - **Condicions**  
   → requisits perquè s’executi
 
@@ -124,11 +130,43 @@ Quan es crea una nova tasca, el quadre de diàleg inclou aquestes pestanyes prin
 - `.ps1`
 - `.js`
 
+---
+
+<!-- SLIDE 7 -->
+# 🔸 **Guions administratius a Windows**
+
 **Utilitat:**
 
 - milloren la **productivitat**
 - permeten automatitzar **tasques repetitives**
 
+---
+
+<!-- SLIDE 7 -->
+# 🔸 **Guions administratius a Windows**
+
+```bat
+:: manteniment.bat
+
+@echo off
+title El meu Guió d'Administració
+echo ===========================================
+echo NETEJANT LA CONFIGURACIÓ DE XARXA...
+echo ===========================================
+
+:: Neteja la memòria cau de les DNS
+ipconfig /flushdns
+
+:: Allibera i renova l'adreça IP
+ipconfig /release
+ipconfig /renew
+
+echo.
+echo ===========================================
+echo GENERANT LLISTA DE DOCUMENTS DE L'ESCRIPTORI...
+echo ===========================================
+...
+```
 ---
 
 <!-- SLIDE 8 -->
@@ -168,7 +206,7 @@ Sintaxi:
 Set-ExecutionPolicy [política] -Scope [àmbit]
 ```
 
-**Exemple que apareix al material:**
+**Exemple:**
 
 ```powershell
 Set-ExecutionPolicy Unrestricted -Scope CurrentUser
