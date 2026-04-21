@@ -103,7 +103,12 @@ A Windows 10, des d'aquesta eina es pot:
 - triar quines actualitzacions instal·lar  
 - desinstal·lar actualitzacions si hi ha problemes  
 
-Ruta que surt al PowerPoint:
+---
+
+<!-- SLIDE 7 -->
+# 🔸 **Opcions útils de Windows Update a Windows 10**
+
+Ruta:
 
 `Veure historial d'actualitzacions → Desinstal·lar actualitzacions`
 
@@ -114,7 +119,7 @@ Nota:
 ---
 
 <!-- SLIDE 8 -->
-# 🔸 **Apartat Ubuntu dins d'aquest bloc**
+# 🔸 **A Ubuntu**
 
 A Ubuntu trobem 2 idees:
 
@@ -160,6 +165,11 @@ Interpretació bàsica:
 - `dpkg -l` → paquets `.deb`  
 - `apt list --installed` → paquets gestionats per `apt`  
 - `snap list` → paquets `snap`  
+
+---
+
+<!-- SLIDE 10 -->
+# 🔸 **Ordres per consultar programes instal·lats a Ubuntu**
 
 - **dpkg**: eina per instal.lar paquets deb   
 - **deb**: fitxers d’instal·lació de programes que fan servir Debian, Ubuntu i altres distribucions derivades  

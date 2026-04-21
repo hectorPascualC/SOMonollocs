@@ -127,10 +127,21 @@ Des d'aquest apartat es pot:
 Dos perfils principals:
 
 - **Públic**  
-  → l'equip es manté ocult i no permet compartir arxius ni impressores
+  → l'equip es manté ocult i no permet compartir arxius ni impressores  
+  → Pensat per a xarxes no confiables, com Wi-Fi d’un bar, aeroport o hotel.
+  → L’equip és menys visible a la xarxa.
+  → La detecció de xarxa i l’ús compartit d’arxius i impressores solen estar desactivats o restringits
+
+---
+
+<!-- SLIDE 9 -->
+# 🔸 **Perfils de xarxa a Windows**
 
 - **Privat**  
   → recomanat per a xarxes de confiança, com casa o feina, i permet compartir recursos
+  → Pensat per a xarxes de confiança, com casa o feina
+  → Permet una configuració més oberta
+  → Es poden activar la detecció de xarxa i el compartir recursos
 
 ---
 
@@ -159,9 +170,16 @@ La seva funció és protegir el sistema davant possibles amenaces
 
 - **Xarxa de domini**  
   → pensada per a entorns corporatius amb polítiques de seguretat gestionades
+  → equip unit a un domini
+  → exemple: torreroja.cat
+  → gestió centralitzada
+  → polítiques de seguretat del servidor
 
 - **Xarxa privada**  
   → pensada per a entorns de confiança, com casa o feina
+  → no hi ha controlador de domini
+  → no hi ha polítiques centrals de domini
+  → la configuració depèn de cada equip
 
 - **Xarxa pública**  
   → aplica més restriccions i bloqueja connexions externes no autoritzades
