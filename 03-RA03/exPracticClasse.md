@@ -61,8 +61,6 @@ Per tant, el resultat complet és:
 
 ## Explicació 
 
-Aquí els alumnes han d’entendre **dues parts**.
-
 ### El temps
 
 Els cinc primers camps indiquen **quan** s’executa la tasca.
