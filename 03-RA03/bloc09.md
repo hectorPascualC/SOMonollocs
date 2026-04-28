@@ -193,7 +193,6 @@ Get-ExecutionPolicy -List
 - **Restricted** → no es pot executar cap guió  
 - **RemoteSigned** → només guions signats i descarregats d’Internet  
 - **AllSigned** → tots els guions han d’estar signats  
-- **Unrestricted** → es poden executar tots, inclosos els no signats
 
 ---
 
