@@ -124,7 +124,7 @@ També es pot permetre que l'usuari estableixi la contrasenya en el proper inici
 ---
 
 <!-- SLIDE 8 -->
-# 🔸 **Tipus d'usuari a Ubuntu**
+# 🔸 **Tipus d'usuari a Linux**
 
 Quan es crea un compte, cal decidir el tipus d'usuari.
 
@@ -148,7 +148,7 @@ Des de la finestra d'**Usuaris** es pot:
 - canviar el tipus d'usuari  
 - eliminar un compte
 
-Quan s'elimina un usuari, Ubuntu pot oferir dues opcions:
+Quan s'elimina un usuari, Linux pot oferir dues opcions:
 
 - conservar els fitxers personals  
 - suprimir els fitxers personals

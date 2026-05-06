@@ -193,14 +193,15 @@ A `/etc/group`, la llista final mostra els membres addicionals del grup.
 
 Però un usuari pot tenir aquest grup com a **grup principal** i no aparèixer a la llista.
 
+L’últim camp mostra els usuaris que pertanyen a aquell grup com a grup secundari o addicional.
+El grup principal de cada usuari es consulta millor a /etc/passwd, mirant el GID.
+
 Per això, per comprovar els grups d'un usuari és millor utilitzar:
 
 ```bash
 id usuari
 groups usuari
 ```
-
-No n'hi ha prou amb mirar només `/etc/group`.
 
 ---
 
@@ -410,7 +411,13 @@ Exemple:
 ```bash
 sudo mkdir /srv/projecte1
 sudo chgrp projecte1 /srv/projecte1
+  # `chgrp`     → change group, és a dir, canviar el grup associat a un fitxer o carpeta.
+  # `projecte1` → és el grup que passarà a ser propietari de la carpeta.
+  # la carpeta /srv/projecte1 passarà a estar associada al grup projecte1.
 sudo chmod 770 /srv/projecte1
+  # propietari → 7 → rwx → llegir, escriure i entrar/executar
+  # grup       → 7 → rwx → llegir, escriure i entrar/executar
+  # altres     → 0 → cap permís
 ```
 
 Això permet que:
@@ -418,29 +425,6 @@ Això permet que:
 - el propietari tingui permisos  
 - el grup `projecte1` tingui permisos  
 - la resta d'usuaris no tingui accés
-
----
-
-<!-- SLIDE 22 -->
-# 🔸 **Recordatori de permisos bàsics**
-
-En GNU/Linux, els permisos s'apliquen a tres nivells:
-
-```text
-usuari propietari | grup propietari | altres usuaris
-```
-
-I poden ser:
-
-- `r` → lectura  
-- `w` → escriptura  
-- `x` → execució o accés a directori
-
-Exemple:
-
-```text
-drwxrwx---
-```
 
 ---
 
@@ -473,6 +457,11 @@ Diferència ràpida:
 
 - **sticky bit**  
   → impedeix que un usuari elimini fitxers d'altres usuaris en directoris compartits
+```bash
+sudo chmod 1777 /srv/compartit
+# 1   → sticky bit activat
+# 777 → tothom pot llegir, escriure i entrar
+```
 
 Exemple típic de sticky bit:
 
