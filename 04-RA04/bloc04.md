@@ -246,7 +246,7 @@ Exemples:
 
 ```bash
 sudo groupmod -n projecte_linux projecte1
-sudo groupmod -g 1600 projecte_linux
+sudo groupmod -g 1600 projecte1
 ```
 
 ---
@@ -330,7 +330,7 @@ sudo usermod -G projecte1 anna
 
 Sense `-a`, pot substituir la llista de grups secundaris de l'usuari.
 
-Forma recomanada:
+Forma correcta:
 
 ```bash
 sudo usermod -aG projecte1 anna
@@ -642,7 +642,7 @@ Per treballar amb grups i perfils:
 
 1. crear el grup necessari  
 2. afegir-hi els usuaris  
-3. tancar i iniciar sessió si cal  
+3. tancar i iniciar sessió
 4. comprovar amb `id` o `groups`  
 5. preparar carpetes i permisos  
 6. revisar `/etc/skel` si cal crear usuaris nous amb plantilla
