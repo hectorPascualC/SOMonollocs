@@ -82,9 +82,7 @@ En aquest bloc ens centrarem sobretot en el muntatge i desmuntatge.
 
 **Muntar** una partició vol dir fer que el seu contingut sigui accessible des d'un directori del sistema.
 
-Aquest directori s'anomena:
-
-## **punt de muntatge**
+Aquest directori s'anomena: **punt de muntatge**
 
 Exemples habituals:
 
@@ -232,6 +230,8 @@ Opcions habituals:
 
 - `-a`  
   → munta tots els sistemes definits a `/etc/fstab`
+  `/etc/fstab` és un fitxer de configuració de Linux que indica quins discos, 
+  particions o sistemes d’arxius s’han de muntar automàticament quan arrenca el sistema.
 
 - `-r`  
   → munta en mode només lectura
@@ -239,12 +239,17 @@ Opcions habituals:
 - `-t`  
   → indica el tipus de sistema d'arxius
 
+---
+
+<!-- SLIDE 12 -->
+# 🔸 **Opcions bàsiques de mount**
+
+
 Exemple:
 
 ```bash
 sudo mount -t ext4 /dev/sdb1 /mnt/dades
 ```
-
 ---
 
 <!-- SLIDE 13 -->
